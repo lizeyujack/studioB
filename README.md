@@ -3,3 +3,6 @@ I tried to use git command to upload files into this branch~
 
 the "Corona_data.ipynb" are some codes for analysis CONVID-19 in AU for the last 10 days.
 ![plot](https://i.imgur.com/pUiNXvZ.png)
+
+I upload some code to show the maps on web app.
+![plot](https://i.imgur.com/vcoCeHN.jpg)
