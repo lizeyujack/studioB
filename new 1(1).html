@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=914d383ffb39722d2bd82652cabe163f"></script>
+<div id="container"></div>
+<script type="text/javascript">
+    window.onload = function() {
+        var map = new AMap.Map('container');
+        map.setZoom(10);              //setzoom 指定缩放级别
+        map.setCenter([116.39,39.9]);
+		
+		AMap.plugin(['AMap.ToolBar', 'AMap.Scale', 'AMap.MapType'], function() {
+        toolBar = new AMap.ToolBar();  //工具条
+    	scale = new AMap.Scale();    //比例尺
+    	mapType = new AMap.MapType();   //地图种类
+   		map.addControl(toolBar);
+    	map.addControl(scale);
+    	map.addControl(mapType);
+});
+        AMap.plugin(["AMap.MouseTool",'AMap.Market'],function(){        //鼠标工具插件
+        mousetool = new AMap.MouseTool();
+		
+    });
+		//实例化marker  
+function addMarker(){  
+    marker=new AMap.Marker({                    
+    icon:"icons/location.png",  
+    position:new AMap.LngLat(116.405467,39.907761)  
+    });  
+    marker.setMap(mapObj);  //在地图上添加点  
+}
+		
+       
+}
+</script>
+<style type=""text/css>
+#container{
+    width:1200px;
+    height: 580px;}
+</head>
+</html>
